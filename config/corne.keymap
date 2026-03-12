@@ -16,6 +16,13 @@
             bindings = <&kp GRAVE &kp C>;
             label = "CEDILHA";
         };
+
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(COMMA)>;
+            label = "NEW_MACRO";
+        };
     };
 
     keymap {
@@ -64,7 +71,7 @@
             bindings = <
 &kp TAB    &kp EXCL           &kp AT        &kp HASH   &kp DLLR          &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
 &kp LCTRL  &kp DOUBLE_QUOTES  &kp QUESTION  &kp RA(C)  &kp RA(KP_COMMA)  &kp C_PP     &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &CEDILHA           &none         &none      &none             &none        &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp APOS
+&kp LSHFT  &kp RA(COMMA)      &none         &none      &none             &none        &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp APOS
                                             &kp LGUI   &none             &kp SPACE    &kp RET    &none      &kp RALT
             >;
         };
